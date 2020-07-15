@@ -1,0 +1,409 @@
+html {
+  height: 100%;
+}
+
+.gradients {
+  position: fixed;
+  z-index: -1;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+}
+
+.body {
+  overflow: hidden;
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  transition-duration: 0.25s;
+
+  font-family: 'Proxima Nova', sans-serif;
+
+  font-size: 1.6rem;
+
+  line-height: 1.3125;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 320px;
+  height: 100%;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 45px;
+}
+
+.navBar__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+
+  height: 44px;
+
+  cursor: pointer;
+}
+
+.svg-profile,
+.svg-messages {
+  width: 28px;
+  height: 28px;
+
+  fill: #dadfe6;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 36px;
+
+  border: 1px #e8e8e8 solid;
+  border-radius: 20px;
+
+  box-shadow: 0 2px 6px 0 rgba(112, 125, 134, 0.14);
+}
+
+.svg-icon {
+  width: 22px;
+  height: 22px;
+
+  fill-rule: nonzero;
+}
+
+.desktop-sidebar {
+  display: none;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  border-width: 0;
+  border-style: solid;
+
+  border-color: #e0e4e9;
+  border-left-width: 1px;
+
+  background: linear-gradient(180deg, #fff 0, #f5f7fa);
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  padding: 0 10px 0 10px;
+
+  transition-duration: 0.25s;
+}
+
+.cards {
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  perspective: 1000px;
+}
+
+.card {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 8px;
+
+  transition-duration: 1s;
+
+  background-color: #f5f7fa;
+  background-size: contain;
+  cursor: pointer;
+  touch-action: none;
+  will-change: transform, opacity;
+}
+
+.cards__card {
+  position: absolute;
+}
+
+.card__name {
+  padding: 16px;
+
+  color: white;
+  font-size: 2.6rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card__info {
+  padding: 16px;
+
+  color: white;
+  cursor: pointer;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card__shadow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 30%;
+
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background-repeat: no-repeat;
+}
+
+.card_1 {
+  background: url(images/Coby.jpg) no-repeat center/cover;
+}
+
+.card_2 {
+  background: url(images/Lucina.jpg) no-repeat center/cover;
+}
+
+.card_3 {
+  background: url(images/Wretchedwitch.jpg) no-repeat center/cover;
+}
+
+.card_4 {
+  background: url(images/Tiger.jpg) no-repeat center/cover;
+}
+
+.card_5 {
+  background: url(images/PupkinThePurrMachine.jpg) no-repeat center center/cover;
+}
+
+.card_6 {
+  background: url(images/sad-smile.jpg) no-repeat center center/cover;
+}
+
+.cards__answer {
+  position: absolute;
+
+  padding: 0.1em;
+
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 4px;
+
+  transition-duration: 0.2s;
+  transition-property: opacity;
+
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  will-change: opacity;
+}
+
+.cards__answer_nope {
+  top: 10%;
+  right: 10%;
+
+  border-color: #ff4848;
+
+  transform: rotate(20deg);
+
+  color: #ff4848;
+}
+
+.cards__answer_like {
+  top: 10%;
+  left: 10%;
+
+  border-color: #01df8a;
+
+  transform: rotate(-20deg);
+
+  color: #01df8a;
+}
+
+.cards__answer_super-like {
+  bottom: 20%;
+
+  border-color: #3ca4ff;
+
+  transform: rotate(-20deg);
+
+  color: #3ca4ff;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 100%;
+  padding: 16px 6px 16px 6px;
+}
+
+.button {
+  z-index: 0;
+
+  width: 60px;
+  height: 60px;
+  padding: 0;
+
+  border-style: none;
+  border-radius: 50%;
+
+  transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s ease;
+
+  -webkit-appearance: button;
+  background: white;
+
+  box-shadow: 0 4px 9px 0 rgba(213, 218, 224, 0.3);
+  cursor: pointer;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button_super-like {
+  width: 48px;
+  height: 48px;
+}
+
+.controls__button {
+  margin: 0 auto;
+}
+
+.control__svg {
+  width: 50%;
+}
+
+.card_2,
+.card_3,
+.card_4,
+.card_5,
+.card_6 {
+  opacity: 0;
+}
+
+@media screen and (min-width: 767px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+  .desktop-sidebar {
+    z-index: 2;
+
+    display: flex;
+    flex-basis: 25%;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    min-width: 325px;
+    max-width: 375px;
+  }
+
+  .sidebar-header {
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+
+    transition-duration: 0.5s;
+
+    background: linear-gradient(262deg, #ff7854, #fd267d);
+    box-shadow: 0 1px 8px 0 rgba(0, 17, 25, 0.27);
+  }
+
+  .profile-link {
+    color: white;
+    text-decoration: none;
+  }
+
+  .sidebar-messages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    height: calc(100% - 60px);
+
+    background-color: white;
+  }
+
+  .messages-header {
+    width: max-content;
+    padding: 12px 20px 12px 20px;
+  }
+
+  .messages-header__headline {
+    margin: 0;
+    padding: 0 8px 0 8px;
+
+    border-bottom: solid #fd5068 3px;
+
+    font-weight: 800;
+    touch-action: manipulation;
+  }
+
+  .cards-wrapper {
+    max-width: 375px;
+    height: 667px;
+    max-height: calc(100vh - 99px);
+  }
+
+  .button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .button_super-like {
+    width: 60px;
+    height: 60px;
+  }
+}

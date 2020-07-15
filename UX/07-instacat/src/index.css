@@ -1,0 +1,545 @@
+.svg-definition {
+  position: fixed;
+
+  visibility: hidden;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+
+  opacity: 0.8;
+}
+
+.icon_preview {
+  fill: url(#logo-gradient);
+  opacity: 1;
+}
+
+.icon_arrow {
+  height: 32px;
+}
+
+.control-label,
+.arrow {
+  cursor: pointer;
+}
+
+.content {
+  width: 700px;
+  height: 960px;
+}
+
+.body__content {
+  margin: auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__controls {
+  margin: 24px 0;
+}
+
+.control-label {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+
+  fill: #444;
+}
+
+.icon_toggle {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.5, 1.95, 1, 1.27);
+}
+
+@keyframes click-arrow {
+  50% {
+    transform: scale(1.3, 1.3);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+
+    opacity: 0.8;
+  }
+}
+
+@keyframes hide {
+  100% {
+    visibility: hidden;
+
+    opacity: 0;
+  }
+}
+
+@keyframes switch-icon {
+  to {
+    transform: scale(1.3, 1.3);
+
+    opacity: 1;
+  }
+}
+
+@keyframes switch-icon-scale-x1 {
+  to {
+    transform: scale(1, 1);
+
+    opacity: 0.8;
+  }
+}
+
+@keyframes switch-icon-scale-x11 {
+  from {
+    transform: scale(1, 1);
+
+    opacity: 0.8;
+  }
+
+  to {
+    transform: scale(1.1, 1.1);
+
+    opacity: 1;
+  }
+}
+
+@keyframes switch-icon-scale-x12 {
+  from {
+    transform: scale(1.1, 1.1);
+
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.2, 1.2);
+
+    opacity: 1;
+  }
+}
+
+@keyframes switch-icon-scale-x13 {
+  from {
+    transform: scale(1.2, 1.2);
+
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.3, 1.3);
+
+    opacity: 1;
+  }
+}
+
+.image_flipped,
+.image-wrapper_rotated,
+.image-wrapper_scaled {
+  transition: transform 0.3s linear;
+}
+
+.main-image-container {
+  overflow: hidden;
+}
+
+.image-wrapper {
+  overflow: hidden;
+
+  width: 632px;
+  height: 632px;
+}
+
+.main-image-container__image-wrapper {
+  margin: 0 auto;
+}
+
+.image-wrapper__modify-element {
+  margin: 0 auto;
+}
+
+.image-wrapper_rotated {
+  display: block;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.image-wrapper_default {
+  display: none;
+}
+
+.image_filtered {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.filters-container {
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.content__filters {
+  position: relative;
+
+  margin-top: 70px;
+}
+
+.filters {
+  display: grid;
+  overflow: hidden;
+  grid-column-gap: 5px;
+  grid-template: 206px / 170px 170px 170px 170px;
+}
+
+.filter {
+  display: none;
+
+  cursor: pointer;
+}
+
+.filter-image {
+  width: 170px;
+  height: 170px;
+
+  object-fit: cover;
+}
+
+.filter__header {
+  display: block;
+
+  margin: 0 0 15px;
+
+  color: #444;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.arrow {
+  display: none;
+
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+
+  fill: #444;
+}
+
+.arrow-pages__arrow {
+  position: absolute;
+  top: 99px;
+}
+
+.arrow-pages__arrow_left {
+  left: -66px;
+
+  transform: rotate(90deg);
+}
+
+.arrow-pages__arrow_right {
+  right: -66px;
+
+  transform: rotate(-90deg);
+}
+
+.arrow_disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.filter-image_empty {
+  filter: unset;
+}
+
+@keyframes empty {
+  100% {
+    filter: none;
+  }
+}
+
+.filter-image_petersburg {
+  filter: grayscale(100%);
+}
+
+@keyframes petersburg {
+  100% {
+    filter: grayscale(100%);
+  }
+}
+
+.filter-image_yalta {
+  filter: sepia(1);
+}
+
+@keyframes yalta {
+  to {
+    filter: sepia(1);
+  }
+}
+
+.filter-image_ural-summer {
+  filter: brightness(120%) hue-rotate(200deg) contrast(120%);
+}
+
+@keyframes filter-ural-summer {
+  to {
+    filter: brightness(120%) hue-rotate(200deg) contrast(120%);
+  }
+}
+
+.filter-image_purple {
+  filter: contrast(148%) hue-rotate(240deg) brightness(88%);
+}
+
+@keyframes filter-purple {
+  100% {
+    filter: contrast(148%) hue-rotate(240deg) brightness(88%);
+  }
+}
+
+.filter-image_blur {
+  filter: blur(1px) contrast(110%);
+}
+
+@keyframes filter-blur {
+  to {
+    filter: blur(1px) contrast(110%);
+  }
+}
+
+.filter-image_past {
+  filter: saturate(2) opacity(80%) sepia(0.8);
+}
+
+@keyframes filter-past {
+  to {
+    filter: saturate(2) opacity(80%) sepia(0.8);
+  }
+}
+
+.filter-image_demon {
+  filter: contrast(110%) invert(100%);
+}
+
+@keyframes filter-demon {
+  100% {
+    filter: contrast(110%) invert(100%);
+  }
+}
+
+.input,
+.control-label_scale,
+.control-label_rotate {
+  display: none;
+}
+
+.input_fill:checked ~ .main-image-container .image-wrapper_editable,
+.input_fill:checked ~ .main-image-container .image-wrapper_modified,
+.input_fill:checked ~ .main-image-container .image-wrapper_rotated {
+  width: 100%;
+  height: 100%;
+}
+
+.input_fill:checked ~ .main-image-container .image_filtered {
+  object-fit: none;
+}
+
+.input_flip:checked ~ .main-image-container .image_flipped {
+  transform: scale(-1, 1);
+}
+
+.input_logo:checked ~ .controls .control-label {
+  animation-name: hide;
+}
+
+.input_logo:checked ~ .filters-container {
+  animation-name: hide;
+}
+
+.input_logo:checked ~ .controls .control-label_logo {
+  animation: none;
+}
+
+.input_logo:checked ~ .main-image-container > .image-wrapper {
+  display: none;
+}
+
+.input_logo:checked ~ .main-image-container .image-wrapper_default {
+  display: block;
+}
+
+.input_logo:checked ~ .controls .icon_preview,
+.input_fill:checked ~ .controls .icon_fill,
+.input_flip:checked ~ .controls .icon_flip {
+  animation-name: switch-icon;
+}
+
+.input_scale-x1:checked ~ .controls .icon_scale,
+.input_rotate-0:checked ~ .controls .icon_rotate {
+  animation-name: switch-icon-scale-x1;
+}
+
+.input_scale-x125:checked ~ .controls .icon_scale,
+.input_rotate-90:checked ~ .controls .icon_rotate {
+  animation-name: switch-icon-scale-x11;
+}
+
+.input_scale-x15:checked ~ .controls .icon_scale,
+.input_rotate-180:checked ~ .controls .icon_rotate {
+  animation-name: switch-icon-scale-x12;
+}
+
+.input_scale-x2:checked ~ .controls .icon_scale,
+.input_rotate-270:checked ~ .controls .icon_rotate {
+  animation-name: switch-icon-scale-x13;
+}
+
+.input_logo:checked ~ .controls .icon_fill,
+.input_logo:checked ~ .controls .icon_flip,
+.input_logo:checked ~ .controls .icon_scale,
+.input_logo:checked ~ .controls .icon_rotate {
+  animation: none;
+}
+
+.input_scale-x1:checked ~ .controls .control-label_scale:nth-child(2),
+.input_scale-x125:checked ~ .controls .control-label_scale:nth-child(3),
+.input_scale-x15:checked ~ .controls .control-label_scale:nth-child(4),
+.input_scale-x2:checked ~ .controls .control-label_scale:nth-child(1),
+.input_rotate-0:checked ~ .controls .control-label_rotate:nth-child(2),
+.input_rotate-90:checked ~ .controls .control-label_rotate:nth-child(3),
+.input_rotate-180:checked ~ .controls .control-label_rotate:nth-child(4),
+.input_rotate-270:checked ~ .controls .control-label_rotate:nth-child(1) {
+  display: block;
+}
+
+.input_scale-x1:checked ~ .main-image-container .image-wrapper_scaled {
+  transform: scale(1, 1);
+}
+
+.input_scale-x125:checked ~ .main-image-container .image-wrapper_scaled {
+  transform: scale(1.25, 1.25);
+}
+
+.input_scale-x15:checked ~ .main-image-container .image-wrapper_scaled {
+  transform: scale(1.5, 1.5);
+}
+
+.input_scale-x2:checked ~ .main-image-container .image-wrapper_scaled {
+  transform: scale(2, 2);
+}
+
+.input_rotate-0:checked ~ .main-image-container .image-wrapper_rotated {
+  transform: rotate(0deg);
+}
+
+.input_rotate-90:checked ~ .main-image-container .image-wrapper_rotated {
+  transform: rotate(90deg);
+}
+
+.input_rotate-180:checked ~ .main-image-container .image-wrapper_rotated {
+  transform: rotate(180deg);
+}
+
+.input_rotate-270:checked ~ .main-image-container .image-wrapper_rotated {
+  transform: rotate(270deg);
+}
+
+.input_page-1:checked ~ .filters-container .filter_1,
+.input_page-1:checked ~ .filters-container .filter_2,
+.input_page-1:checked ~ .filters-container .filter_3,
+.input_page-1:checked ~ .filters-container .filter_4,
+.input_page-2:checked ~ .filters-container .filter_2,
+.input_page-2:checked ~ .filters-container .filter_3,
+.input_page-2:checked ~ .filters-container .filter_4,
+.input_page-2:checked ~ .filters-container .filter_5,
+.input_page-3:checked ~ .filters-container .filter_3,
+.input_page-3:checked ~ .filters-container .filter_4,
+.input_page-3:checked ~ .filters-container .filter_5,
+.input_page-3:checked ~ .filters-container .filter_6,
+.input_page-4:checked ~ .filters-container .filter_4,
+.input_page-4:checked ~ .filters-container .filter_5,
+.input_page-4:checked ~ .filters-container .filter_6,
+.input_page-4:checked ~ .filters-container .filter_7,
+.input_page-5:checked ~ .filters-container .filter_5,
+.input_page-5:checked ~ .filters-container .filter_6,
+.input_page-5:checked ~ .filters-container .filter_7,
+.input_page-5:checked ~ .filters-container .filter_8 {
+  display: block;
+}
+
+.input_page-1:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(1),
+.input_page-1:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(1),
+.input_page-2:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(2),
+.input_page-2:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(2),
+.input_page-3:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(3),
+.input_page-3:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(3),
+.input_page-4:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(4),
+.input_page-4:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(4),
+.input_page-5:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(5),
+.input_page-5:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(5) {
+  display: block;
+}
+
+.input_page-1:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(1) .icon_toggle,
+.input_page-2:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(2) .icon_toggle,
+.input_page-3:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(3) .icon_toggle,
+.input_page-4:checked ~ .filters-container .arrow-pages__arrow_right:nth-child(4) .icon_toggle,
+.input_page-5:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(5) .icon_toggle,
+.input_page-4:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(4) .icon_toggle,
+.input_page-3:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(3) .icon_toggle,
+.input_page-2:checked ~ .filters-container .arrow-pages__arrow_left:nth-child(2) .icon_toggle {
+  animation-fill-mode: none;
+  animation-name: click-arrow;
+}
+
+.input_filter-1:checked ~ .filters-container .filter_1 .filter__header,
+.input_filter-2:checked ~ .filters-container .filter_2 .filter__header,
+.input_filter-3:checked ~ .filters-container .filter_3 .filter__header,
+.input_filter-4:checked ~ .filters-container .filter_4 .filter__header,
+.input_filter-5:checked ~ .filters-container .filter_5 .filter__header,
+.input_filter-6:checked ~ .filters-container .filter_6 .filter__header,
+.input_filter-7:checked ~ .filters-container .filter_7 .filter__header,
+.input_filter-8:checked ~ .filters-container .filter_8 .filter__header {
+  color: black;
+  font-weight: bold;
+}
+
+.input_filter-1:checked ~ .main-image-container .image_filtered {
+  animation-name: empty;
+}
+
+.input_filter-2:checked ~ .main-image-container .image_filtered {
+  animation-name: petersburg;
+}
+
+.input_filter-3:checked ~ .main-image-container .image_filtered {
+  animation-name: yalta;
+}
+
+.input_filter-4:checked ~ .main-image-container .image_filtered {
+  animation-name: filter-ural-summer;
+}
+
+.input_filter-5:checked ~ .main-image-container .image_filtered {
+  animation-name: filter-purple;
+}
+
+.input_filter-6:checked ~ .main-image-container .image_filtered {
+  animation-name: filter-blur;
+}
+
+.input_filter-7:checked ~ .main-image-container .image_filtered {
+  animation-name: filter-past;
+}
+
+.input_filter-8:checked ~ .main-image-container .image_filtered {
+  animation-name: filter-demon;
+}

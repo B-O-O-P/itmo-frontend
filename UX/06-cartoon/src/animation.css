@@ -1,0 +1,280 @@
+/*TRAIN*/
+.train {
+  animation: move-forward 10s linear infinite;
+}
+
+@keyframes move-forward {
+  0% {
+    transform: translate3d(100%, 0, 120px) scale3d(0.8, 0.8, 1);
+  }
+  100% {
+    transform: translate3d(-200%, 0, 120px) scale3d(0.8, 0.8, 1);
+  }
+}
+
+/*WHEELS*/
+
+.wheel {
+  animation: spin-forward 1.25s linear infinite;
+}
+
+@keyframes spin-forward {
+  to {
+    transform: rotate3d(0, 0, 1, -1turn);
+  }
+}
+
+.wheel-joint {
+  animation: spin-forward 1.25s linear infinite reverse;
+}
+
+.wheel-joint-2 {
+  animation: mount-sync 1.25s linear infinite;
+
+  transform: rotate(-10deg);
+}
+
+@keyframes mount-sync {
+  to {
+    transform: rotate3d(0, 0, 1, 350deg);
+  }
+}
+
+/*SMOKE*/
+
+.smoke {
+  width: 1.5rem;
+  height: 0.8rem;
+
+  animation: smoke-up 2s ease-out infinite;
+
+  background: rgba(255, 255, 255, 0.3);
+
+  opacity: 0;
+}
+
+.smoke-2 {
+  animation-delay: 0.2s;
+}
+
+.smoke-3 {
+  animation-delay: 0.4s;
+}
+
+.smoke-4 {
+  animation-delay: 0.6s;
+}
+
+@keyframes smoke-up {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(125px, -150px, 130px) scale3d(2, 2, 1);
+
+    background: rgba(255, 255, 255, 0.8);
+
+    opacity: 0;
+  }
+}
+
+/*MOON*/
+.moon {
+  animation: moon-rise 60s linear infinite;
+}
+
+@keyframes moon-rise {
+  0% {
+    animation-timing-function: ease-out;
+    transform: rotate3d(0, 0, 1, 0deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, 0deg)
+      scale3d(1.5, 1.5, 1);
+  }
+  22.5%,
+  27.5% {
+    animation-timing-function: ease-in;
+    transform: rotate3d(0, 0, 1, 90deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, -90deg)
+      scale3d(0.8, 0.8, 1);
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: rotate3d(0, 0, 1, 180deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, -180deg)
+      scale3d(1, 1, 1);
+  }
+
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, -360deg)
+      scale3d(1, 1, 1);
+  }
+}
+
+/*SUN*/
+.sun {
+  animation: sun-rise 60s 30s linear infinite;
+}
+
+@keyframes sun-rise {
+  from {
+    animation-timing-function: ease-out;
+    transform: rotate3d(0, 0, 1, 0deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, 0deg)
+      scale3d(1.5, 1.5, 1);
+  }
+  22.5%,
+  27.5% {
+    animation-timing-function: ease-in;
+    transform: rotate3d(0, 0, 1, 90deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, -90deg)
+      scale3d(0.8, 0.8, 1);
+
+    background: #ffe484;
+  }
+  50% {
+    animation-timing-function: ease-in;
+    transform: rotate3d(0, 0, 1, 180deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, -180deg)
+      scale3d(1, 1, 1);
+
+    background: #d14009;
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg) translate3d(-500px, 0, 20px) rotate3d(0, 0, 1, -360deg)
+      scale3d(1, 1, 1);
+  }
+}
+
+/*DAY*/
+.canvas {
+  animation: day-night-change 60s ease infinite;
+
+  background: initial;
+}
+
+@keyframes day-night-change {
+  0%,
+  50%,
+  100% {
+    background: #546bab;
+  }
+  12.5%,
+  37.5% {
+    background: #2e4482;
+  }
+  20%,
+  30% {
+    background: #131862;
+  }
+  62.5%,
+  87.5% {
+    background: #a3e8fd;
+  }
+  70%,
+  80% {
+    background: #26c6f8;
+  }
+}
+
+/*HILLS*/
+
+.hill,
+.hill3 {
+  animation: front-hills 60s linear infinite;
+
+  background: initial;
+}
+
+@keyframes front-hills {
+  0%,
+  50%,
+  100% {
+    background: #606064;
+  }
+  12.5%,
+  37.5% {
+    background: #27435f;
+  }
+  20%,
+  30% {
+    background: #002142;
+  }
+  62.5%,
+  87.5% {
+    background: #4f5054;
+  }
+  70%,
+  80% {
+    background: #373840;
+  }
+}
+
+.hill2 {
+  animation: back-hills 60s linear infinite;
+
+  background: initial;
+}
+
+@keyframes back-hills {
+  0%,
+  50%,
+  100% {
+    background: #8b9da3;
+  }
+  12.5%,
+  37.5% {
+    background: #3f5973;
+  }
+  20%,
+  30% {
+    background: #27435f;
+  }
+  62.5%,
+  87.5% {
+    background: #7a8b91;
+  }
+  70%,
+  80% {
+    background: #6f7f87;
+  }
+}
+
+/*CLOUDS*/
+.cloud {
+  left: -300px;
+}
+
+.cloud:nth-child(1) {
+  top: 50px;
+
+  animation: cloud-move 60s 5s linear infinite;
+
+  transform: translateZ(80px) scale3d(0.5, 0.5, 1);
+}
+
+.cloud:nth-child(2) {
+  top: 150px;
+
+  animation: cloud-move 45s 10s linear infinite reverse;
+
+  transform: translateZ(80px) scale3d(-0.8, 0.8, 1);
+}
+
+.cloud:nth-child(3) {
+  top: 100px;
+
+  animation: cloud-move 30s 20s linear infinite;
+
+  transform: translateZ(80px);
+}
+
+.cloud:nth-child(4) {
+  top: 250px;
+
+  animation: cloud-move 25s 0s linear infinite;
+
+  transform: translateZ(80px) scale3d(-1.2, 1.2, 1);
+}
+
+@keyframes cloud-move {
+  from {
+    left: -300px;
+  }
+  to {
+    left: 1000px;
+  }
+}

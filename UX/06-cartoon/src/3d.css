@@ -1,0 +1,77 @@
+.center,
+.canvas {
+  transform-style: preserve-3d;
+}
+
+.center {
+  perspective: 1000px;
+}
+
+.canvas {
+  overflow: visible;
+
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-area {
+  position: absolute;
+  z-index: 100;
+
+  width: 45%;
+  height: 45%;
+}
+
+.hover-area-top-left,
+.hover-area_top-right {
+  top: 0;
+}
+
+.hover-area-top-left,
+.hover-area_bottom-left {
+  left: 0;
+}
+
+.hover-area_bottom-left,
+.hover-area_bottom-right {
+  bottom: 0;
+}
+
+.hover-area_bottom-right,
+.hover-area_top-right {
+  right: 0;
+}
+
+.hover-area:hover ~ .center {
+  transition: max-width 0.5s;
+}
+
+.hover-area_top-left:hover ~ .center .canvas,
+.hover-area_top-left:hover ~ .center .center__hide {
+  transform: rotate3d(1, -1, 0, 15deg) scale3d(0.9, 0.9, 1);
+}
+
+.hover-area_top-right:hover ~ .center .canvas,
+.hover-area_top-right:hover ~ .center .center__hide {
+  transform: rotate3d(1, 1, 0, 25deg) scale3d(0.9, 0.9, 1);
+}
+
+.hover-area_bottom-right:hover ~ .center .canvas,
+.hover-area_bottom-right:hover ~ .center .center__hide {
+  transform: rotate3d(-1, 1, 0, 15deg) scale3d(0.9, 0.9, 1);
+}
+
+.hover-area_bottom-left:hover ~ .center .canvas,
+.hover-area_bottom-left:hover ~ .center .center__hide {
+  transform: rotate3d(-1, -1, 0, 15deg) scale3d(0.9, 0.9, 1);
+}
+
+.bridge {
+  width: 150%;
+  margin-left: -25%;
+
+  transform: translate3d(0, -12px, 120px) scale3d(0.8, 0.8, 1);
+}
+
+.h-con {
+  transform: translateZ(10px);
+}

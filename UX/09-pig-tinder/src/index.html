@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Задача «СвиноТиндер»</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="shortcut icon" href="https://tinder.com/favicon-32x32.png">
+  </head>
+  <body class="body">
+    <svg class="gradients">
+      <radialGradient id="svg-fill-radial__tinder"
+                      cx="0.5" cy="1" fx="0.5" fy="1" r="1" spreadMethod="pad">
+        <stop offset="0%" stop-color="#ff7854"></stop>
+        <stop offset="100%" stop-color="#fd267d"></stop>
+      </radialGradient>
+      <linearGradient id="svg-fill-linear__nope"
+                      x1="0.14644660940672627" x2="0.8535533905932737"
+                      y1="0.8535533905932737" y2="0.1464466094067262" spreadMethod="pad">
+        <stop offset="0%" stop-color="#ff7854"></stop>
+        <stop offset="100%" stop-color="#fd267d"></stop>
+      </linearGradient>
+      <linearGradient id="svg-fill-linear__super-like"
+                      x1="0.14644660940672627" x2="0.8535533905932737"
+                      y1="0.8535533905932737" y2="0.1464466094067262" spreadMethod="pad">
+        <stop offset="0%" stop-color="#08d0ff"></stop>
+        <stop offset="100%" stop-color="#3ca4ff"></stop>
+      </linearGradient>
+      <linearGradient id="svg-fill-linear__like"
+                      x1="0.14644660940672627" x2="0.8535533905932737"
+                      y1="0.8535533905932737" y2="0.1464466094067262" spreadMethod="pad">
+        <stop offset="0%" stop-color="#7cf4f5"></stop>
+        <stop offset="100%" stop-color="#01df8a"></stop>
+      </linearGradient>
+    </svg>
+    <div class="content body__content">
+      <nav class="navBar">
+        <a class="navBar__link">
+          <svg class="svg-profile" viewBox="0 0 24 24" >
+            <g stroke="none" stroke-width="1">
+              <path class="" d="M16.085 13.026c1.285-.975 2.088-2.625
+              2.088-5.55 0-3-2.65-5.476-5.861-5.476C9.1 2 6.45 4.4 6.45 7.475c0
+              3 .803 4.726 2.168 5.7-2.73 1.576-5.38 4.576-4.416 6.076 2.007
+              3.525 15.095 3.75 16.7.15.643-1.725-2.006-4.65-4.817-6.375">
+              </path>
+            </g>
+          </svg>
+        </a>
+        <a class="navBar__link navBar__link_icon">
+          <div class="icon-wrapper">
+            <svg class="svg-icon" viewBox="0 0 24 24">
+              <path d="M8.21 10.08c-.02 0-.04 0-.06-.02-.67-.9-.84-2.44-.89-3.03
+               0-.11-.13-.18-.23-.12C4.93 8.08 3 10.86 3 13.54 3 18.14 6.2 22 11.7 22c5.15
+               0 8.7-3.98 8.7-8.46 0-5.87-4.2-9.77-7.93-11.53a.13.13 0 0 0-.19.14c.48 3.16-.18
+                6.6-4.07 7.93z" fill="url(#svg-fill-radial__tinder)">
+              </path>
+            </svg>
+          </div>
+        </a>
+        <a class="navBar__link">
+          <svg class="svg-messages" viewBox="0 0 24 24">
+            <path d="M11.612 16.143c0-2.821 2.627-5.213 5.97-5.213.776 0
+            1.552.184 2.269.43 0-4.048-4-7.36-8.836-7.36C6.06 4 2 7.434 2
+            11.543c0 2.637 1.672 5.09 4.18 6.317v2.76c0 .307.238.49.596.307l3.582-1.84h.896c.418
+            0 .836 0 1.194-.123-.597-.859-.836-1.84-.836-2.821zm5.97-3.68c-2.507 0-4.537
+            1.595-4.537 3.68s2.03 3.802 4.477 3.802h.299l.597.246.955.613c.299 0 .597
+            0 .597-.368v-1.104c1.194-.613 2.03-1.84 2.03-3.189 0-2.085-1.97-3.68-4.478-3.68h.06z">
+            </path>
+          </svg>
+        </a>
+      </nav>
+      <aside class="desktop-sidebar">
+        <div class="sidebar-header">
+          <a class="profile-link" href="#">
+            <h2>My profile</h2>
+          </a>
+        </div>
+        <div class="sidebar-messages">
+          <div class="messages-header">
+            <h3 class="messages-header__headline">Messages</h3>
+          </div>
+          <div class="messages"></div>
+        </div>
+      </aside>
+      <main class="main">
+        <div class="cards-wrapper">
+          <div class="cards">
+            <div class="cards__card card card_6" id="card6">
+              <div class="card__name">
+                No cats left
+              </div>
+              <div class="card__info">
+                Please, try again later
+              </div>
+              <div class="card__shadow"></div>
+            </div>
+            <div class="cards__card card card_5" id="card5">
+              <div class="card__name">
+                Pumpkin
+              </div>
+              <div class="card__info">
+                Melbourne, Australia
+              </div>
+              <div class="card__shadow"></div>
+            </div>
+            <div class="cards__card card card_4" id="card4">
+              <div class="card__name">
+                Tiger
+              </div>
+              <div class="card__info">
+                Saint-Petersburg, Russia
+              </div>
+              <div class="card__shadow"></div>
+            </div>
+            <div class="cards__card card card_3" id="card3">
+              <div class="card__name">
+                Witch
+              </div>
+              <div class="card__info">
+                Hell, Earth
+              </div>
+              <div class="card__shadow"></div>
+            </div>
+            <div class="cards__card card card_2" id="card2">
+              <div class="card__name">
+                Lucina
+              </div>
+              <div class="card__info">
+                Tokyo, Japan
+              </div>
+              <div class="card__shadow"></div>
+            </div>
+            <div class="cards__card card card_1" id="card1">
+              <div class="card__name">
+                Coby
+              </div>
+              <div class="card__info">
+                California, USA
+              </div>
+              <div class="card__shadow"></div>
+            </div>
+            <div class="cards__answer cards__answer_nope" id="nope">Nope</div>
+            <div class="cards__answer cards__answer_like" id="like">Like</div>
+            <div class="cards__answer cards__answer_super-like" id="super-like">Super-Like</div>
+          </div>
+          <div class="controls">
+            <button class="controls__button button button_nope" onclick="swipeNope()">
+              <svg class="control__svg" viewBox="0 0 24 24">
+                <path class="" d="M14.926 12.56v-1.14l5.282 5.288c1.056.977 1.056 2.441 0
+              3.499-.813 1.057-2.438 1.057-3.413 0L11.512 15h1.138l-5.363 5.125c-.975 1.058-2.438
+              1.058-3.495 0-1.056-.813-1.056-2.44 0-3.417l5.201-5.288v1.14L3.873
+              7.27c-1.137-.976-1.137-2.44 0-3.417a1.973 1.973 0 0 1 3.251 0l5.282
+              5.207H11.27l5.444-5.207c.975-1.139 2.438-1.139 3.413 0 1.057.814 1.057 2.44 0
+              3.417l-5.2 5.288z" fill="url(#svg-fill-linear__nope)">
+                </path>
+              </svg>
+            </button>
+            <button class="controls__button button button_super-like" onclick="swipeSuper()">
+              <svg class="control__svg" viewBox="0 0 24 24">
+                <path d="M21.06 9.06l-5.47-.66c-.15
+                0-.39-.25-.47-.41l-2.34-5.25c-.47-.99-1.17-.99-1.56
+                0L8.87 7.99c0 .16-.23.4-.47.4l-5.47.66c-1.01 0-1.25.83-.46 1.65l4.06
+                3.77c.15.16.23.5.15.66L5.6 20.87c-.16.98.4 1.48 1.33.82l4.69-2.79h.78l4.69
+                2.87c.78.58 1.56 0
+                1.25-.98l-1.02-5.75s0-.4.23-.57l3.91-3.86c.78-.82.78-1.64-.39-1.64v.08z"
+                      fill="url(#svg-fill-linear__super-like)">
+                </path>
+              </svg>
+            </button>
+            <button class="controls__button button button_like" onclick="swipeLike()">
+              <svg class="control__svg" viewBox="0 0 24 24">
+                <path d="M21.994 10.225c0-3.598-2.395-6.212-5.72-6.212-1.78 0-2.737.647-4.27
+              2.135C10.463 4.66 9.505 4 7.732 4 4.407 4 2 6.62 2 10.231c0 1.52.537 2.95 1.533
+              4.076l8.024 7.357c.246.22.647.22.886 0l7.247-6.58.44-.401.162-.182.168-.174a6.152
+              6.152 0 0 0 1.54-4.09" fill="url(#svg-fill-linear__like)">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

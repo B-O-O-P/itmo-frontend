@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Cairo Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url('cairo-black-webfont.woff2') format('woff2'),
+    url('cairo-black-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cairo Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('cairo-bold-webfont.woff2') format('woff2'),
+    url('cairo-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cairo Extra Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('cairo-extralight-webfont.woff2') format('woff2'),
+    url('cairo-extralight-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cairo Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('cairo-light-webfont.woff2') format('woff2'),
+    url('cairo-light-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cairo Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('cairo-regular-webfont.woff2') format('woff2'),
+    url('cairo-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'cairosemibold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('cairo-semibold-webfont.woff2') format('woff2'),
+    url('cairo-semibold-webfont.woff') format('woff');
+}

@@ -1,0 +1,55 @@
+image: node:10
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - deps
+  - test
+  - closed-test
+
+install:
+  stage: deps
+  only:
+    - merge_requests
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+  script:
+    - npm ci
+  artifacts:
+    paths:
+      - node_modules/
+
+lint:
+  stage: test
+  only:
+    - merge_requests
+  dependencies:
+    - install
+  script:
+    - npm run lint
+
+test:
+  stage: test
+  only:
+    - merge_requests
+  dependencies:
+    - install
+  script:
+    - npm run test
+
+closed-test:
+  stage: closed-test
+  only:
+    - triggers
+  trigger:
+    project: yandex-courses/frontend/internal/homeworks/js/01-warmup
+    strategy: depend
+  variables:
+    UPSTREAM_PROJECT: ${CI_PROJECT_PATH}
+    UPSTREAM_PROJECT_ID: ${CI_PROJECT_ID}
+    UPSTREAM_REF: ${CI_BUILD_REF}
+    UPSTREAM_BRANCH: ${CI_COMMIT_REF_NAME}

@@ -1,0 +1,259 @@
+html {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  position: relative;
+
+  box-sizing: border-box;
+
+  min-height: 100%;
+}
+
+header {
+  top: 0;
+
+  z-index: 999;
+
+  background: white;
+}
+
+header > * {
+  width: max-content;
+  margin: 0 auto;
+}
+
+header .website-name {
+  font-family: 'PT SansNarrow', sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+}
+
+header .website-name:first-letter {
+  color: red;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.view {
+  display: none;
+
+  margin: 0;
+}
+
+label[for='view'] {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  transition: 0.2s;
+
+  cursor: pointer;
+
+  font-size: 32px;
+}
+
+label[for='view']:hover {
+  text-shadow: 0 0 9px lightgray;
+}
+
+.view:checked + label {
+  transform: rotate(90deg);
+}
+
+.border {
+  border: gray 1px solid;
+}
+
+.border-top {
+  border-top: gray 1px solid;
+}
+
+.border-bottom {
+  border-bottom: gray 1px solid;
+}
+
+main {
+  padding: 0.5% 1% 90px;
+}
+
+.cards {
+  position: static;
+
+  display: block;
+
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.card {
+  display: inline-block;
+
+  width: 20%;
+  min-width: 200px;
+  margin: 0 12px 12px 0;
+
+  border: 1px solid gray;
+}
+
+.card:hover {
+  box-shadow: 0 0 9px lightgray;
+}
+
+.cat-name {
+  overflow: hidden;
+
+  padding: 4px 4px 4px 12px;
+
+  font-size: 24px;
+
+  text-overflow: ellipsis;
+}
+
+.name-link {
+  text-decoration: none;
+}
+
+.name-link:visited {
+  color: black;
+}
+
+.name-link:hover {
+  color: red;
+}
+
+.cat-description {
+  padding: 12px;
+}
+
+.cat-info {
+  padding: 2px;
+}
+
+.brief-description {
+  padding-top: 2px;
+}
+
+.brief-description:hover {
+  color: green;
+}
+
+.img-wrapper {
+  display: block;
+  overflow: hidden;
+
+  margin-right: auto;
+  margin-left: auto;
+
+  object-fit: cover;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+img:hover {
+  transition: 0.2s;
+  transform: scale(1.05);
+}
+
+.view:checked ~ .cards .card {
+  width: 99%;
+
+  margin: auto 0 24px;
+}
+
+.view:checked ~ .cards .img-wrapper {
+  float: left;
+
+  width: 50%;
+  min-width: 100px;
+  height: 50%;
+  margin: 2px 12px 2px 2px;
+
+  object-fit: cover;
+  object-position: center top;
+}
+
+.view:checked ~ .cards .cat-name {
+  display: inline;
+
+  padding: 8px 8px 8px 0;
+
+  font-size: 24px;
+}
+
+.view:checked ~ .cards .diseases {
+  display: none;
+}
+
+.view:checked ~ .cards .breed {
+  display: none;
+}
+
+.view:checked ~ .cards .full-description {
+  display: block;
+
+  padding: 8px;
+
+  text-align: left;
+}
+
+.view:not(:checked) ~ .cards .full-description {
+  display: none;
+}
+
+.view:checked ~ .cards .brief-description {
+  display: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer .wrapper {
+  text-align: justify;
+}
+
+.footer .wrapper:after {
+  display: inline-block;
+
+  width: 100%;
+
+  content: '';
+}
+
+.footer .contacts {
+  display: inline-block;
+
+  color: grey;
+}
+
+li {
+  list-style-type: none;
+}
+
+.footer .footer-link {
+  color: #4c4cd8;
+  text-decoration: none;
+}
+
+.footer .copyright {
+  display: inline-block;
+
+  text-align: right;
+}

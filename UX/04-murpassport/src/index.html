@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>04-murpassport</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body class="body">
+    <script type="text/javascript" src="./simulation.js"></script>
+    <header class="header body__header" lang="ru" role="banner">
+      <h1 class="title header__title">Мурмода</h1>
+    </header>
+    <div class="content body__content">
+      <aside class="sidebar content__sidebar">
+        <nav class="navigation sidebar__navigation">
+          <h2 class="title navigation__title">Меню</h2>
+          <ul class="navigation__list" role="menubar">
+            <li class="list-item" role="menuitem">
+              <a class="list-item__tab" href="#data">Данные</a>
+            </li>
+            <li class="list-item" role="menuitem">
+              <a class="list-item__tab" href="#traits">Черты</a>
+            </li>
+            <li class="list-item" role="menuitem">
+              <a class="list-item__tab" href="#achievements">Достижения</a>
+            </li>
+            <li class="list-item" role="menuitem">
+              <a class="list-item__tab" href="#gallery">Галерея</a>
+            </li>
+            <li class="list-item" role="menuitem">
+              <a class="list-item__tab" href="#feedback">Обратная связь</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <main class="section content__section" lang="ru" role="main">
+        <div class="section__anchor" id="data"></div>
+        <section class="card card_round-bordered section__card card_data">
+          <h3 class="title card__header">Данные</h3>
+          <div class="card__information">
+            <div class="card__img-wrapper">
+              <img class="profile-image" src="images/coby-profile.jpg"
+                   alt="Кот Коби позирует" role="img" />
+            </div>
+            <div class="card__text">
+              <p class="text-line">
+                <strong>Имя:</strong> Коби
+              </p>
+              <p class="text-line">
+                <strong>Порода:</strong> Короткошёрстный Британец
+              </p>
+              <p class="text-line">
+                <strong>Пол:</strong> Мужской
+              </p>
+              <p class="text-line">
+                <strong>Возраст:</strong> 4 года
+              </p>
+              <p class="text-line">
+                <strong>Место проживания:</strong> Калифорния, США
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="section__anchor" id="traits"></div>
+        <section class="card card_round-bordered section__card">
+          <h3 class="title card__header">Черты</h3>
+          <div class="card__information">
+            <ul class="text-list">
+              <li class="text-line">Нежный</li>
+              <li class="text-line">Дерзкий</li>
+              <li class="text-line">Имеет хороший вкус</li>
+              <li class="text-line">Ответственный</li>
+              <li class="text-line">Трудолюбивый</li>
+            </ul>
+          </div>
+        </section>
+        <div class="section__anchor" id="achievements"></div>
+        <section class="card card_round-bordered section__card">
+          <h3 class="title card__header">Достижения</h3>
+          <div class="card__information">
+            <ul class="text-list">
+              <li class="text-line">Выпустил свой календарь</li>
+              <li class="text-line">Был на обложке журнала</li>
+              <li class="text-line">Имеет свой фан-сайт</li>
+            </ul>
+          </div>
+        </section>
+        <div class="section__anchor" id="gallery"></div>
+        <section class="card card_round-bordered section__card">
+          <h3 class="title card__header">Галерея</h3>
+          <div class="card__information gallery-wrapper">
+            <div class="gallery-img-wrapper gallery-wrapper__image">
+              <img class="photo" src="images/coby-american.jpg"
+                   alt="Кот Коби американец" role="img" />
+            </div>
+            <div class="gallery-img-wrapper gallery-wrapper__image">
+              <img class="photo" src="images/coby-hawaii.jpg"
+                   alt="Кот Коби в гавайской рубашке" role="img" />
+            </div>
+            <div class="gallery-img-wrapper gallery-wrapper__image">
+              <img class="photo" src="images/coby-hoodie.jpg"
+                   alt="Кот Коби в голубом худи" role="img" />
+            </div>
+            <div class="gallery-img-wrapper gallery-wrapper__image">
+              <img class="photo" src="images/coby-office.jpg"
+                   alt="Кот Коби в деловом наряде" role="img" />
+            </div>
+            <div class="gallery-img-wrapper gallery-wrapper__image">
+              <img class="photo" src="images/coby-president.jpg"
+                   alt="Кот Коби как американский президент" role="img" />
+            </div>
+            <div class="gallery-img-wrapper gallery-wrapper__image">
+              <img class="photo" src="images/coby-style.jpg"
+                   alt="Кот Коби в стильной шапке" role="img" />
+            </div>
+          </div>
+        </section>
+        <div class="section__anchor" id="feedback"></div>
+        <section class="card card_round-bordered section__card">
+          <h3 class="title card__header">Обратная связь</h3>
+          <form class="feedback">
+            <label for="comment" class="feedback__comment">
+            Сообщите, если хотите сотрудничать:
+            </label>
+            <textarea id="comment" class="feedback__text-area input input_covered input_bordered"
+                      placeholder="Сообщите информацию для сотрудничества"
+                      aria-required="true"></textarea>
+            <label class="feedback__email-label" for="email">Ваш email:</label>
+            <input class="feedback__email-input input input_covered input_bordered" type="email"
+                   placeholder="Ваш e-mail" id="email" aria-required="true">
+            <button class="feedback__button" type="submit" role="button">
+            Отправить
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer class="footer" role="contentinfo">
+      <address>
+        <span>&#9993;:«<a class="footer__link"
+          href="mailto:support@murpassport.ru">support@murpassport.ru</a>»
+        </span>
+      </address>
+      <div class="copyright">
+        &copy; 2019 ООО «<a class="footer__link" href="https://cats.ru">Мурмода</a>»
+      </div>
+    </footer>
+  </body>
+</html>

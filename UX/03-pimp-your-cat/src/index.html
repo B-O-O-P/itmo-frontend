@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>03-pimp-your-cat</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body>
+    <main class="window window_with-border_round">
+      <div class="close-button window__close-button" title="Закрыть">
+        <input class="window__close-checkbox" id="close-button" type="checkbox" checked>
+        <label class="label window__close-label" for="close-button"></label>
+      </div>
+      <form class="form">
+        <h1 class="form__name">Погладьте кота!</h1>
+        <div class="form-info">
+          <div class="form-info__item description">
+            Оп, вам выпала возможность погладить этого замечательного кавайного котика,
+            не упустите её!
+          </div>
+          <div class="form-info__item pet-times">
+            <label class="label" for="times">
+            Сколько раз погладить котика:
+              <input id="times" class="input-text input-text_with-border"
+                     min="1" type="number" placeholder="1">
+            </label>
+          </div>
+          <div class="form-info__item pet-options">
+            <div class="radio pet-options__option">
+              <input class="radio__input" type="radio" name="radio" id="against">
+              <label class="label radio__label radio_with-border_left-round-border" for="against">
+                Против шерсти
+              </label>
+            </div>
+            <div class="radio pet-options__option">
+              <input class="radio__input" type="radio" name="radio" id="along" checked>
+              <label class="label radio__label" for="along">Вдоль шерсти</label>
+            </div>
+            <div class="radio pet-options__option">
+              <input class="radio__input" type="radio" name="radio" id="tum">
+              <label class="label radio__label radio_with-border_right-round-border" for="tum">
+                Животик
+              </label>
+            </div>
+          </div>
+          <input class="form-info__email-input input-text input-text_with-border"
+                 type="email" name="email" placeholder="Ваш email(на случай чего)">
+          <div class="form-info__item">
+            <label class="label bite-subscribe" for="subscribe">
+              <input class="default-selector" type="checkbox" id="subscribe" checked>
+            Защита от внезапного куся
+            </label>
+          </div>
+          <div class="form-info__item input-button">
+            <button class="button-join" type="submit">Погладить</button>
+          </div>
+        </div>
+      </form>
+      <div class="window__img-wrapper">
+        <img class="cat-picture" src="images/box-cat.png" alt="Котик в коробке" />
+      </div>
+    </main>
+  </body>
+</html>

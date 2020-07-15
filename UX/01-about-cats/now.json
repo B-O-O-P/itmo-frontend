@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "name": "01-about-cats",
+  "routes": [{ "src": "/", "dest": "/public/index.html" }]
+}

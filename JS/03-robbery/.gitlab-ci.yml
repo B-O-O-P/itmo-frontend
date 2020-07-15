@@ -1,0 +1,17 @@
+image: registry.gitlab.com/yandex-courses/frontend/internal/software/viserion:1.0.0
+
+stages:
+  - test
+
+test:
+  stage: test
+  only:
+    - triggers
+  trigger:
+    project: yandex-courses/frontend/internal/homeworks/js/03-robbery
+    strategy: depend
+  variables:
+    UPSTREAM_PROJECT: ${CI_PROJECT_PATH}
+    UPSTREAM_PROJECT_ID: ${CI_PROJECT_ID}
+    UPSTREAM_REF: ${CI_BUILD_REF}
+    UPSTREAM_BRANCH: ${CI_COMMIT_REF_NAME}
